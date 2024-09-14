@@ -1,0 +1,36 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  box-shadow: 0 1px 3px -2px black;
+}
+
+.nav-sections{
+  display: flex;
+  gap: 55px;
+  align-items: center;
+  
+}
+
+.nav-sections li {
+  list-style: none;
+  cursor: pointer;
+}
+ 
+ .nav-sections li hr{
+  border: none;
+  background-color: rgb(216, 71, 71);
+  height: 3px;
+  width: 80%;
+ }
+
+ .login-btn{
+   border-radius: 75px;
+   outline: none;
+   padding: 10px 15px;
+   border: solid black 2px;
+ }
