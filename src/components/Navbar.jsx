@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 function Navbar() {
   const [select, setSelect] = useState("Home");
 
@@ -13,14 +14,19 @@ function Navbar() {
         <div>NAME OF SHOP</div>
         <div className="nav-sections">
           
-          <li onClick = {()=> handleMenuChange("Home")}> Home {select === "Home" ? <hr/> : <> </>}</li>
+          <li to = "/" onClick={() => handleMenuChange("Home")}> 
+             <Link to="/">Home</Link>{select === "Home" ? <hr /> : <> </>}  
+          </li>
 
-          <li onClick = {()=> handleMenuChange("Products 1")}> Products 1 {select === "Products 1" ? <hr/> : <></>}  </li>
+          <li onClick = {()=> handleMenuChange("Products 1")}>
+            <Link to="/product1">Products 1</Link> {select === "Products 1" ? <hr/> : <></>}  </li>
 
-          <li onClick = {()=> handleMenuChange("Products 2")}> Products 2 {select === "Products 2" ? <hr/> : <></>} </li>
+          <li onClick = {()=> handleMenuChange("Products 2")}>
+            <Link to='/product2'>Products 2</Link> 
+            {select === "Products 2" ? <hr/> : <></>} </li>
 
         </div>
-
+    
         <button className = 'login-btn'> LOGIN </button>
       </div>
     </>
