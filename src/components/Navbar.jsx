@@ -22,7 +22,7 @@ function Navbar() {
             <Link to="/product1">Products 1</Link> {select === "Products 1" ? <hr/> : <></>}  </li>
 
           <li onClick = {()=> handleMenuChange("Products 2")}>
-            <Link to='/product2'>Products 2</Link> 
+            <Link to='/About'>About Us</Link> 
             {select === "Products 2" ? <hr/> : <></>} </li>
 
         </div>
