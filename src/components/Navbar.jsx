@@ -11,7 +11,7 @@ function Navbar() {
   return (
     <>
       <div className="navContainer">
-        <div>NAME OF SHOP</div>
+        <div>PixelRealm</div>
         <div className="nav-sections">
           
           <li to = "/" onClick={() => handleMenuChange("Home")}> 
@@ -23,7 +23,7 @@ function Navbar() {
 
           <li onClick = {()=> handleMenuChange("Products 2")}>
             <Link to='/About'>About Us</Link> 
-            {select === "Products 2" ? <hr/> : <></>} </li>
+            {select === "About" ? <hr/> : <></>} </li>
 
         </div>
     

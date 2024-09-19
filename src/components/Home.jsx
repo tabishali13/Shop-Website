@@ -1,7 +1,35 @@
+import './Home.css';
+import  { useNavigate } from 'react-router-dom';
+
 function Home(){
+const navigate = useNavigate();
+     
+    const handleOrder =()=> {
+        navigate('/product1');
+     }
+
+    const handleLearnMore =()=> {
+        navigate('/About');
+     }
+
     return(
         <>
-        <h1>This is the home page</h1>
+        <div className="content">
+
+        <div className="homepage">
+        <h1>PixelRealm</h1>
+        <div className='buttonContainer'>
+        <button onClick={handleOrder}>Order Now</button>
+        <button onClick={handleLearnMore}>Learn More</button>
+        </div>
+        </div>
+
+        <div className="imgContainer">
+            <img src='/images/homepage image.jpeg' alt=''/>
+        </div>
+
+        </div>
+
         </>
     );
 }
