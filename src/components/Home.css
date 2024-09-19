@@ -31,6 +31,11 @@ body{
     margin: 5px;
 }
 
+.homepage button:hover{
+    background-color: #1d5e9a;
+    cursor: pointer;
+}
+
 .content{
     display: flex;
     flex-direction: row;

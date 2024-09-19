@@ -5,7 +5,7 @@ function Home(){
 const navigate = useNavigate();
      
     const handleOrder =()=> {
-        navigate('/product1');
+        navigate('/shop');
      }
 
     const handleLearnMore =()=> {

@@ -36,10 +36,27 @@
   width: 100%;
  }
 
- .login-btn{
+ .signIn-btn{
    border-radius: 10px;
+   background-color: #003568;
    outline: none;
    padding: 10px 15px;
-   border: solid black 2px;
-   color: black;
+   border: solid white 1px;
+   color: white;
+   margin-right: 5px;
+ }
+
+ .signup-btn{
+  border-radius: 10px;
+  background-color: #003568;
+  outline: none;
+  padding: 10px 15px;
+  border: solid white 1px;
+  color: white;
+ }
+
+ .signIn-btn:hover,
+ .signup-btn:hover{
+  background-color: #1d5e9a;
+  cursor: pointer;
  }

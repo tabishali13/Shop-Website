@@ -1,4 +1,4 @@
-function Product1(){
+function Shop(){
     return(
         <>
         <h1>Hello this is product 1!</h1>
@@ -6,4 +6,4 @@ function Product1(){
     );
 
 }
-export default Product1;
+export default Shop;

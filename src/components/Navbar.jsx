@@ -18,16 +18,20 @@ function Navbar() {
              <Link to="/">Home</Link>{select === "Home" ? <hr /> : <> </>}  
           </li>
 
-          <li onClick = {()=> handleMenuChange("Products 1")}>
-            <Link to="/product1">Products 1</Link> {select === "Products 1" ? <hr/> : <></>}  </li>
+          <li onClick = {()=> handleMenuChange("Shop")}>
+            <Link to="/shop">Shop</Link> {select === "Shop" ? <hr/> : <></>}  </li>
 
           <li onClick = {()=> handleMenuChange("Products 2")}>
             <Link to='/About'>About Us</Link> 
             {select === "About" ? <hr/> : <></>} </li>
 
         </div>
-    
-        <button className = 'login-btn'> LOGIN </button>
+
+        <div className='navButtons'>
+        <button className = 'signIn-btn'> Sign In </button>
+        <button className= 'signup-btn'>Sign Up</button>
+        </div>
+
       </div>
     </>
   );
