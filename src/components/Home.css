@@ -1,5 +1,6 @@
 *{
     color: #F0F0F0;
+    font-family: 'Lato', sans-serif;
 }
 .homepage{
     display: flex;
@@ -9,7 +10,9 @@
 }
 
 .homepage h1{
-    text-align: center;
+    display: block;
+    text-align: start;
+    max-width: 80%;
 }
 
 body{
@@ -21,7 +24,7 @@ body{
     border-radius: 10px;
     border: none;
     outline: none;
-    font-size: 0.85rem;
+    font-size: 1rem;
     padding: 7px 10px;
     background-color: #003568;
     color: white;
@@ -45,10 +48,11 @@ body{
 }
 
 .imgContainer img{
-    margin: 10px;
+    
     max-width: 100%;
     max-height: 550px;
     object-fit: cover;
     border-radius: 10px;
     height: auto;
+    margin-right: 40px;
 }
