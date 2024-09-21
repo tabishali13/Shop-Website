@@ -21,7 +21,7 @@ function Navbar() {
           <li onClick = {()=> handleMenuChange("Shop")}>
             <Link to="/shop">Shop</Link> {select === "Shop" ? <hr/> : <></>}  </li>
 
-          <li onClick = {()=> handleMenuChange("Products 2")}>
+          <li onClick = {()=> handleMenuChange("About")}>
             <Link to='/About'>About Us</Link> 
             {select === "About" ? <hr/> : <></>} </li>
 
