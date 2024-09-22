@@ -25,8 +25,6 @@ function About(){
             <img src='/images/values.jpeg' alt='customer-values'/>
 
         </div>
-
-
         </div>
 
         </>

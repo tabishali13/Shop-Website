@@ -1,12 +1,26 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 function Navbar() {
-  const [select, setSelect] = useState("Home");
+  const [select, setSelect] = useState(()=>{
+    //either return the page in local storage or 'Home' (on first render)
+    return localStorage.getItem("selectedPage") || "Home";
+  });
 
   const handleMenuChange = (page) => {
     setSelect(page);
+    //saved the selected page into local storage
+    localStorage.setItem("selectedPage", page);
   }
+  //used for loading the selected page on component mount
+  useEffect(()=>
+  {
+   const savedPage = localStorage.getItem("selectedPage");
+
+   if(savedPage){
+    setSelect(savedPage);
+   }
+  }, []);
 
   return (
     <>
