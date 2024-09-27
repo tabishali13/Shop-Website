@@ -1,9 +1,10 @@
-import axios from "axios";
+
+import CartItem from "./CartItem";
 
 function Shop(){
     return(
         <>
-        <h1>Hello this is product 1!</h1>
+        <CartItem/>
         </>
     );
 

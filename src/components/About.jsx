@@ -22,7 +22,7 @@ function About(){
                 every type of gamer. Our priority is <br/> customer satisfaction by offering the highest quality 
                 products <br/> and staying up to date with latest in gaming technology.
             </h3>
-            <img src='/images/values.jpeg' alt='customer-values'/>
+            <img src= '/images/values.jpeg' alt='customer-values'/>
 
         </div>
         </div>
