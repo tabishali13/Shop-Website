@@ -42,7 +42,7 @@ li img{
 
 @media(max-width: 600px){
     li{
-        flex: 0 1 calc(100% - 50px);
-        max-width: calc(100% - 50px);
+        flex: 0 1 calc(100% - 40px);
+        max-width: calc(1000% - 40px);
     }
 }
