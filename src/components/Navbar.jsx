@@ -36,11 +36,10 @@ function Navbar() {
             <Link to="/shop">Shop</Link> {select === "Shop" ? <hr/> : <></>}  </li>
 
           <li onClick = {()=> handleMenuChange("About")}>
-            <Link to='/About'>About Us</Link> 
+            <Link to='/About'> About</Link> 
             {select === "About" ? <hr/> : <></>} </li>
 
         </div>
-
         <div className='navButtons'>
         <button className = 'signIn-btn'> Sign In </button>
         <button className= 'signup-btn'>Sign Up</button>

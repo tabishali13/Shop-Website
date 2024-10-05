@@ -10,12 +10,13 @@
 }
 .gaming-consoles{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
     padding: 10px;
-    gap: 10px;
+    gap: 20px;
 }
 
 li{
@@ -23,10 +24,25 @@ li{
     margin-top: 10px;
     flex: 0 1 calc(33.33% - 50px);
     max-width: calc(33.33% - 50px);
+
 }
 
 li img{
     border-radius: 10px;
     height: auto;
+    object-fit: cover;
 }
 
+@media(max-width: 1024px ){
+    li{
+        flex: 0 1 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+    }
+}
+
+@media(max-width: 600px){
+    li{
+        flex: 0 1 calc(100% - 50px);
+        max-width: calc(100% - 50px);
+    }
+}

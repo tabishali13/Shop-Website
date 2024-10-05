@@ -15,13 +15,16 @@
 
 .nav-sections{
   display: flex;
-  gap: 55px;
+  gap: 65px;
   align-items: center;  
 }
 
 .nav-sections li {
   list-style: none;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nav-sections li a{
@@ -33,7 +36,8 @@
   border: none;
   background-color: rgb(231, 221, 221);
   height: 3px;
-  width: 100%;
+  width: 115%;
+  border-radius: 10px;
  }
 
  .signIn-btn{

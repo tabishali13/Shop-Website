@@ -1,12 +1,11 @@
-import { useState, useEffect } from "react";
+
 import data from "../data";
 import '../styles/CartItem.css';
 
 function CartItem(){
-
     return(
     <>
-        <div className="console-Selection"> 
+      <div className="console-Selection"> 
             <h1>Available Consoles</h1>
             <ul className="gaming-consoles">
                 {data.map((product) => 
@@ -17,7 +16,6 @@ function CartItem(){
                     </li>
                 )}
             </ul>
-
         </div>
     </>
     );
