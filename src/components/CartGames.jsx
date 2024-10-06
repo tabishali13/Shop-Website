@@ -3,6 +3,9 @@ import axios from "axios";
 import '../styles/cartGames.css';
 
 function CartGames(){
+const [games, setGames] = useState([]);
+const [error, setError] = useState(null);
+const [loading, setLoading] = useState(false);
 const apiKey = '4048465119f74783a7534a2370685f35';
 const uRL = `https://api.rawg.io/api/games?key=${apiKey}`;
 
@@ -10,14 +13,18 @@ useEffect(()=> {
     async function getData(){
     try{
         const response = await axios.get(uRL); 
-        console.log(response.data)
-        }catch (error){
-            console.error('Error', error);
+        console.log(response.data.results);
+        setGames(response.data.results);
+        setLoading(false);
+        }
+        catch (error){
+            setError(error.message);
+            setLoading(false);
         }
     }
     getData();
 }, []);
-
+//Here I want to display specific games, need to figure out how to use props to select games
     return(
         <>
         </>
