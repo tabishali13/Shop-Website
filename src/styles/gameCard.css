@@ -1,0 +1,18 @@
+.gameCards img{
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.gameCards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.gameCards h2{
+    font-size: 1.5rem;
+}
