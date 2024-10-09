@@ -31,10 +31,13 @@ useEffect(()=> {
         <>
             <div className="gameCardContainer">
                 {games.length > 0 ?(
-                <div className="gameCards">
+                <div className="displayCards">
                 <GameCard imageUrl = {games[0].background_image} name = {games[0].name} released = {games[0].released}/>
                 <GameCard imageUrl = {games[1].background_image} name = {games[1].name} released = {games[1].released}/>
                 <GameCard imageUrl = {games[2].background_image} name = {games[2].name} released = {games[2].released}/>
+                <GameCard imageUrl = {games[3].background_image} name = {games[3].name} released = {games[3].released}/>
+                <GameCard imageUrl = {games[4].background_image} name = {games[4].name} released = {games[4].released}/>
+                <GameCard imageUrl = {games[5].background_image} name = {games[5].name} released = {games[5].released}/>
                 </div>
                 ): (
                     <p>No GameCard Rendered</p>
