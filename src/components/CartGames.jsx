@@ -29,10 +29,12 @@ useEffect(()=> {
 //Here I want to display specific games, need to figure out how to use props to select games
     return(
         <>
+            <div>
+                <h1>Available Games</h1>
             <div className="gameCardContainer">
                 {games.length > 0 ?(
                 <div className="displayCards">
-                <GameCard imageUrl = {games[0].background_image} name = {games[0].name} released = {games[0].released}/>
+                <GameCard imageUrl = {games[0].background_image} name = {games[0].name} released = {games[0].released}/> 
                 <GameCard imageUrl = {games[1].background_image} name = {games[1].name} released = {games[1].released}/>
                 <GameCard imageUrl = {games[2].background_image} name = {games[2].name} released = {games[2].released}/>
                 <GameCard imageUrl = {games[3].background_image} name = {games[3].name} released = {games[3].released}/>
@@ -42,6 +44,7 @@ useEffect(()=> {
                 ): (
                     <p>No GameCard Rendered</p>
                 )}
+            </div>
             </div>
         </>
     );
