@@ -4,6 +4,7 @@ import Navbar from './components/Navbar.jsx';
 import Home from './components/Home.jsx';
 import Shop from './components/Shop.jsx';
 import About from './components/About.jsx';
+import Consoledetails from './components/Consoledetails.jsx';
 import { Routes, Route } from 'react-router-dom';
 
 
@@ -17,6 +18,7 @@ function App() {
         <Route path='/'element= {<Home/>}></Route>
         <Route path='/shop' element={<Shop/>}></Route>
         <Route path='/About' element={<About/>}></Route>
+        <Route path='/product/:productId' element={<Consoledetails/>}></Route>
       </Routes>
     </BrowserRouter>
     </>

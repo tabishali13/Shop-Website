@@ -4,12 +4,13 @@
   grid-template-rows: repeat(2, auto);
   gap: 1rem;
 }
+
 .gameCardContainer{
     display: flex;
     justify-content: center;
     padding: 20px;
-
 }
+
 h1{
   text-align: center;
 }
