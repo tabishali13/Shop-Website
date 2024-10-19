@@ -1,11 +1,12 @@
 import { useParams } from "react-router-dom";
 import data from "../data";
 import { useEffect, useState } from "react";
+import '../styles/consoleDetails.css';
 
 function Consoledetails(){
     const {productId} = useParams();
     const [userProduct, setUserProduct] = useState({});
-    const [error, setError] = useState(false);
+    const [error, setError] = useState(false); //this state is used to track errors
 
     //The useEffect here will depend on the productId ie product.id from the URL
     useEffect(()=> {
@@ -31,6 +32,16 @@ function Consoledetails(){
     
     return(
         <>
+        <div className= "item-details">
+            <img src = {userProduct.image} alt= {userProduct.name}/>
+            <div className= "item-description">
+            <h2>{userProduct.name}</h2>
+            <br/>
+            <p>{userProduct.description}</p>
+            <br/>
+            <p>{userProduct.price}</p>
+            </div>
+        </div>
         </>
     );
 }
