@@ -27,7 +27,7 @@ function Consoledetails(){
     }
     //accesses the product object's quantity and decreases by 1
     const decreaseQty = () =>{
-        setUserProduct({...userProduct, qty: userProduct.qty + 1});
+        setUserProduct({...userProduct, qty: userProduct.qty - 1});
     }
     
     return(
@@ -39,7 +39,15 @@ function Consoledetails(){
             <br/>
             <p>{userProduct.description}</p>
             <br/>
-            <p>{userProduct.price}</p>
+            <p>${userProduct.price}</p>
+            <br/>
+            <div class= 'item-quantity'>
+                <button onClick={decreaseQty}>-</button>
+                <span>{userProduct.qty}</span>
+                <button onClick={increaseQty}>+</button>
+            </div>
+            <br />
+            <button> Add to Cart </button>
             </div>
         </div>
         </>

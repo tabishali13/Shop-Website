@@ -1,0 +1,50 @@
+.item-details{
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+.item-description{
+    padding: 20px 45px;
+    width: 500px;
+}
+.item-description h2{
+    font-weight: bold;
+}
+
+.item-details img{
+    object-fit: cover;
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
+}
+
+.item-description p{
+    font-size: 1.2rem;
+}
+
+.item-description button{
+    color: white;
+    font-size: 1.2rem;
+    background-color: #003568;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.item-description button:hover{
+    background-color: #0a3b69;
+}
+
+.item-quantity{
+    font-size: 1rem;
+}
+
+.item-quantity button{
+    padding: 4px 15px;
+    margin: 5px;
+}
