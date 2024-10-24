@@ -1,0 +1,14 @@
+
+.game-Details{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.game-Details img{
+    object-fit: cover;
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
+}

@@ -16,7 +16,7 @@ function GameCard({imageUrl, name, released}){
     );
 }
 
-GameCard.PropTypes = {
+GameCard.propTypes = {
     imageUrl: PropTypes.string,
     name: PropTypes.string,
     released: PropTypes.string,

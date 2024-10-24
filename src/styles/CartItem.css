@@ -1,5 +1,7 @@
+
 .console-Selection{
     align-items: center;
+    
 }
 
 .console-Selection h1{
@@ -24,7 +26,6 @@ li{
     margin-top: 10px;
     flex: 0 1 calc(33.33% - 50px);
     max-width: calc(33.33% - 50px);
-
 }
 
 li img{

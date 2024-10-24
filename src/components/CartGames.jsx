@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import '../styles/cartGames.css';
 import GameCard from "./GameCard";
+import { Link } from "react-router-dom";
 
 function CartGames(){
 const [games, setGames] = useState([]);
@@ -26,7 +27,7 @@ useEffect(()=> {
     getData();
 }, []);
 
-//Here I want to display specific games, need to figure out how to use props to select games
+//Put a Link around each GameCard to link to GameCardDetails.jsx
     return(
         <>
             <div>
@@ -34,7 +35,9 @@ useEffect(()=> {
             <div className="gameCardContainer">
                 {games.length > 0 ?(
                 <div className="displayCards">
-                <GameCard imageUrl = {games[0].background_image} name = {games[0].name} released = {games[0].released}/> 
+                <Link to={`/game/${games[0].slug}`} state={{imageUrl:games[0].background_image, name: games[0].name, released: games[0].released}}>
+                    <GameCard imageUrl = {games[0].background_image} name = {games[0].name} released = {games[0].released}/>
+                </Link>
                 <GameCard imageUrl = {games[1].background_image} name = {games[1].name} released = {games[1].released}/>
                 <GameCard imageUrl = {games[2].background_image} name = {games[2].name} released = {games[2].released}/>
                 <GameCard imageUrl = {games[3].background_image} name = {games[3].name} released = {games[3].released}/>
