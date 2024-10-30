@@ -8,6 +8,7 @@
 .gameCards{
     text-align: center;
     margin: 10px;
+    text-decoration: none;
 }
 
 .gameCards h2{

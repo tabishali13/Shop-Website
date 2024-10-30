@@ -2,7 +2,11 @@
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: repeat(2, auto);
-  gap: 1rem;
+  gap: 2rem;
+}
+
+.displayCards a{
+  text-decoration: none;
 }
 
 .gameCardContainer{

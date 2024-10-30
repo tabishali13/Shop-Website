@@ -27,7 +27,7 @@ function Consoledetails(){
     }
     //accesses the product object's quantity and decreases by 1
     const decreaseQty = () =>{
-        setUserProduct({...userProduct, qty: userProduct.qty - 1});
+        setUserProduct({...userProduct, qty: userProduct.qty > 1 ? userProduct.qty - 1 : 1});
     }
     
     return(

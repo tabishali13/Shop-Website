@@ -31,10 +31,14 @@ const game1 = {description: "The latest entry in the gta series, play as three d
                 , quantity: 1}; // gta-v
 const game2 = {description: "A next generation open world game taking place in a fantasy universe apart of the widely popular Witcher series."
                 ,quantity: 1}; // witcher 3
-const game3 = {description: ""};
-const game4 = {description: ""};
-const game5 = {description: ""};
-const game6 = {description: ""};
+const game3 = {description: "The sequel to the original Red Dead Redemption, taking place during the end of the wild west. The gang must steal and rob to survive across America."
+                ,quantity: 1};
+const game4 = {description: "A hyper action first person shooter taking place on Mars. Take control of the powerful space marine as he takes on the army of hell."
+                ,quantity: 1};
+const game5 = {description: "A modern retelling of the origin story of Laura Croft. As she goes from a frightened young woman to a hardened survivor."
+                ,quantity: 1};
+const game6 = {description: "The latest entry in the widely popular fallout series. Take control of your own custom character as they embark in the wasteland in a post apocalyptic Boston." 
+                ,quantity: 1};
     return(
         <>
             <div>
@@ -42,27 +46,27 @@ const game6 = {description: ""};
             <div className="gameCardContainer">
                 {games.length > 0 ?(
                 <div className="displayCards">
-                <Link to={`/game/${games[0].slug}`} state={{imageUrl:games[0].background_image, name: games[0].name, price: "$59.99", description: game1.description}}>
+                <Link to={`/game/${games[0].slug}`} state={{imageUrl:games[0].background_image, name: games[0].name, price: "$59.99", description: game1.description, qty: game1.quantity}}>
                     <GameCard imageUrl = {games[0].background_image} name = {games[0].name} price= "$59.99" />
                 </Link>
-                <Link to={`/game/${games[1].slug}`} state={{imageUrl:games[1].background_image, name:games[1].name, price: "$59.99"}}>
+                <Link to={`/game/${games[1].slug}`} state={{imageUrl:games[1].background_image, name:games[1].name, price: "$59.99", description: game2.description, qty: game2.quantity}}>
                 <GameCard imageUrl = {games[1].background_image} name = {games[1].name} price= "$59.99" />
                 </Link>
 
-                <Link to={`/game/${games[2].slug}`} state={{imageUrl:games[2].background_image, name:games[2].name, price: "$59.99"}}>
-                <GameCard imageUrl = {games[2].background_image} name = {games[2].name} price= "$59.99" />
+                <Link to={`/game/${games[8].slug}`} state={{imageUrl:games[8].background_image, name:games[8].name, price: "$59.99", description: game3.description, qty: game3.quantity}}>
+                <GameCard imageUrl = {games[8].background_image} name = {games[8].name} price= "$59.99" />
                 </Link>
 
-                <Link to={`/game/${games[3].slug}`} state={{imageUrl:games[3].background_image, name: games[3].name, price: "$59.99"}}>
-                <GameCard imageUrl = {games[3].background_image} name = {games[3].name} price= "$59.99" />
+                <Link to={`/game/${games[19].slug}`} state={{imageUrl:games[19].background_image, name: games[19].name, price: "$59.99", description: game4.description, qty: game4.quantity}}>
+                <GameCard imageUrl = {games[19].background_image} name = {games[19].name} price= "$59.99" />
                 </Link>
 
-                <Link to={`/game/${games[4].slug}`} state={{imageUrl:games[4].background_image, name: games[4].name, price: "$59.99"}}>
+                <Link to={`/game/${games[4].slug}`} state={{imageUrl:games[4].background_image, name: games[4].name, price: "$59.99", description: game5.description, qty: game5.quantity}}>
                 <GameCard imageUrl = {games[4].background_image} name = {games[4].name} price= "$59.99" />
                 </Link>
 
-                <Link to={`/game/${games[5].slug}`} state={{imageUrl:games[5].background_image, name: games[5].name, price: "$59.99"}}>
-                <GameCard imageUrl = {games[5].background_image} name = {games[5].name} price= "$59.99" />
+                <Link to={`/game/${games[16].slug}`} state={{imageUrl:games[16].background_image, name: games[16].name, price: "$59.99", description: game6.description, qty: game6.quantity}}>
+                <GameCard imageUrl = {games[16].background_image} name = {games[16].name} price= "$59.99" />
                 </Link>
                 
                 </div>

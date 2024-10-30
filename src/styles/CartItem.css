@@ -21,6 +21,10 @@
     gap: 20px;
 }
 
+.gaming-consoles li a{
+    text-decoration: none;
+}
+
 li{
     list-style: none;
     margin-top: 10px;

@@ -17,3 +17,41 @@
     padding: 20px 45px;
     width: 500px;
 }
+
+.game-Description h2{
+    font-weight: bold;
+}
+
+.game-Description p{
+    font-size: 1.2rem;
+}
+
+.itemQuantity button{
+    color: white;
+    font-size: 1.2rem;
+    background-color: #003568;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.itemQuantity button:hover{
+    background-color: #0a3b69;;
+}
+
+.addToCart button {
+    background-color: #003568;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.addToCart button:hover{
+    background-color: #0a3b69;
+    cursor: pointer;
+}
