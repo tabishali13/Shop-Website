@@ -8,7 +8,7 @@ function GameCard({imageUrl, name, price}){
     return(
         <>
         <div className="gameCards">
-            <img src={imageUrl} alt= {name} className="gameImage"/>
+            <img src={imageUrl} alt= {name} className="gameImage" />
              <h2>{name}</h2> 
              <p>{price}</p>
         </div>

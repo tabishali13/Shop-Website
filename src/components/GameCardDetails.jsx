@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import '../styles/gameDetail.css'
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 const GameCardDetails =()=> {
     const location = useLocation();
