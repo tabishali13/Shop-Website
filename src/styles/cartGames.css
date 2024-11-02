@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: repeat(2, auto);
-  gap: 2rem;
+  gap: 2rem 7rem;
 }
 
 .displayCards a{

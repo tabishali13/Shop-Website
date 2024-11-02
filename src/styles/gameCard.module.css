@@ -1,0 +1,28 @@
+.gameCards * {
+    color: #333;
+}
+
+.gameCards img{
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.gameCards{
+    text-align: center;
+    margin: 10px;
+    text-decoration: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.gameCards:hover{
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.gameCards h2{
+    font-size: 1.5rem;
+}

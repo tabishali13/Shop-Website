@@ -4,6 +4,10 @@
     
 }
 
+.console-Selection * {
+    color: #333;
+}
+
 .console-Selection h1{
     padding: 10px;
     text-align: center;
@@ -19,6 +23,7 @@
     text-align: center;
     padding: 10px;
     gap: 20px;
+  
 }
 
 .gaming-consoles li a{
@@ -30,6 +35,14 @@ li{
     margin-top: 10px;
     flex: 0 1 calc(33.33% - 50px);
     max-width: calc(33.33% - 50px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+li:hover{
+    box-shadow:  0px 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 li img{

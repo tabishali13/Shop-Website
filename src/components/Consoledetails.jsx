@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import data from "../data";
 import { useEffect, useState } from "react";
-import '../styles/consoleDetails.css';
+import styles from '../styles/consoleDetails.module.css';
 
 function Consoledetails(){
     const {productId} = useParams();
@@ -32,16 +32,17 @@ function Consoledetails(){
     
     return(
         <>
-        <div className= "item-details">
+        <div className= {styles.wrapper}>
+        <div className = {styles['item-details']}>
             <img src = {userProduct.image} alt= {userProduct.name}/>
-            <div className= "item-description">
+            <div className = {styles['item-description']}>
             <h2>{userProduct.name}</h2>
             <br/>
             <p>{userProduct.description}</p>
             <br/>
             <p>${userProduct.price}</p>
             <br/>
-            <div class= 'item-quantity'>
+            <div class= {styles['item-quantity']}>
                 <button onClick={decreaseQty}>-</button>
                 <span>{userProduct.qty}</span>
                 <button onClick={increaseQty}>+</button>
@@ -49,6 +50,7 @@ function Consoledetails(){
             <br />
             <button> Add to Cart </button>
             </div>
+        </div>
         </div>
         </>
     );

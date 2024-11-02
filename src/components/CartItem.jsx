@@ -1,14 +1,14 @@
 
 import data from "../data";
-import '../styles/CartItem.css';
 import { Link } from "react-router-dom";
+import styles from '../styles/CartItem.module.css';
 
 function CartItem(){
     return(
     <>
-      <div className="console-Selection"> 
+      <div className= {styles['console-Selection']}> 
             <h1>Available Consoles</h1>
-            <ul className="gaming-consoles">
+            <ul className={styles['gaming-consoles']}>
                 {data.map((product) => 
                     <li key={product.id}>
                         <Link to={`/product/${product.id}`}>

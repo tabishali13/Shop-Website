@@ -1,16 +1,16 @@
 //This component is used for making cards for each game
 import React from "react";
-import '../styles/gameCard.css';
+import styles from '../styles/gameCard.module.css';
 import PropTypes from 'prop-types';
 
 function GameCard({imageUrl, name, price}){
 /* Create a display with image, game name, release date*/
     return(
         <>
-        <div className="gameCards">
+        <div className= {styles.gameCards}>
             <img src={imageUrl} alt= {name} className="gameImage" />
              <h2>{name}</h2> 
-             <p>{price}</p>
+             <p>{price} CAD</p>
         </div>
         </>
     );

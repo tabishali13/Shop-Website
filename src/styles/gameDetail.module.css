@@ -1,9 +1,14 @@
+.game-Details *{
+    color: #333;
+}
 
 .game-Details{
     display: flex;
     gap: 20px;
     padding: 20px;
     justify-content: center;
+    background-color: #f0f0f0;
+    min-height: 100vh;
 }
 
 .game-Details img{
@@ -44,6 +49,7 @@
 
 .addToCart button {
     background-color: #003568;
+    color: white;
     border: none;
     outline: none;
     font-size: 1.2rem;

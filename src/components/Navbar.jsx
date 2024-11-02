@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './Navbar.css';
+import styles from './Navbar.module.css';
 import { Link } from 'react-router-dom';
 function Navbar() {
   const [select, setSelect] = useState(()=>{
@@ -24,9 +24,10 @@ function Navbar() {
 
   return (
     <>
-      <div className="navContainer">
+      <div className= {styles.navContainer}>
         <div>PixelRealm</div>
-        <div className="nav-sections">
+        
+        <div className= {styles['nav-sections']}>
           
           <li to = "/" onClick={() => handleMenuChange("Home")}> 
              <Link to="/">Home</Link>{select === "Home" ? <hr /> : <> </>}  
@@ -40,9 +41,10 @@ function Navbar() {
             {select === "About" ? <hr/> : <></>} </li>
 
         </div>
-        <div className='navButtons'>
-        <button className = 'signIn-btn'> Sign In </button>
-        <button className= 'signup-btn'>Sign Up</button>
+
+        <div className= {styles.navButtons}>
+        <button className = {styles['signIn-btn']}> Sign In </button>
+        <button className= {styles['signup-btn']}>Sign Up</button>
         </div>
 
       </div>

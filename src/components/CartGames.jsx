@@ -42,7 +42,7 @@ const game6 = {description: "The latest entry in the widely popular fallout seri
     return(
         <>
             <div>
-                <h1>Available Games</h1>
+                <h1 style={{color: '#333'}}>Available Games</h1>
             <div className="gameCardContainer">
                 {games.length > 0 ?(
                 <div className="displayCards">
