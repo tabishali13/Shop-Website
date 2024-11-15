@@ -7,12 +7,14 @@ import About from './components/About.jsx';
 import Consoledetails from './components/Consoledetails.jsx'; 
 import GameCardDetails from './components/GameCardDetails.jsx';
 import { Routes, Route } from 'react-router-dom';
+import { CartContext } from './contex/CartContext.jsx';
 
 
 function App() {
   
   return (
     <>
+    <CartContext.Provider>
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -23,6 +25,7 @@ function App() {
         <Route path='/game/:slug' element={<GameCardDetails/>}></Route>
       </Routes>
     </BrowserRouter>
+    </CartContext.Provider>
     </>
   )
 }

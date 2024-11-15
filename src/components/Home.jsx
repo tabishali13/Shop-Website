@@ -1,4 +1,4 @@
-import './Home.css';
+import styles from './Home.module.css';
 import  { useNavigate } from 'react-router-dom';
 
 function Home(){
@@ -14,17 +14,17 @@ const navigate = useNavigate();
 
     return(
         <>
-        <div className="content">
+        <div className= {styles.content}>
 
-        <div className="homepage">
+        <div className={styles.homepage}>
         <h1>PixelRealm Your One Stop for your favourite video games</h1>
-        <div className='buttonContainer'>
+        <div className= {styles.buttonContainer}>
         <button onClick={handleOrder}>Order Now</button>
         <button onClick={handleLearnMore}>Learn More</button>
         </div>
         </div>
 
-        <div className="imgContainer">
+        <div className= {styles.imgContainer}>
             <img src='/images/homepage image.jpeg' alt=''/>
         </div>
 

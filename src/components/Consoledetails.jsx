@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import data from "../data";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import styles from '../styles/consoleDetails.module.css';
 
 function Consoledetails(){
@@ -29,6 +29,13 @@ function Consoledetails(){
     const decreaseQty = () =>{
         setUserProduct({...userProduct, qty: userProduct.qty > 1 ? userProduct.qty - 1 : 1});
     }
+
+    const addToCart = useMemo( ()=> ({
+        image: userProduct.image,
+        name: userProduct.name,
+        price: userProduct.price,
+        qty: userProduct.qty
+    }), [userProduct.image, userProduct.name, userProduct.price, userProduct.qty]);
     
     return(
         <>
@@ -48,7 +55,7 @@ function Consoledetails(){
                 <button onClick={increaseQty}>+</button>
             </div>
             <br />
-            <button> Add to Cart </button>
+            <button onClick={ ()=> console.log(addToCart)}> Add to Cart </button>
             </div>
         </div>
         </div>

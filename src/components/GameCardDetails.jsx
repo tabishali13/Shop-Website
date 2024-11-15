@@ -23,6 +23,13 @@ const GameCardDetails =()=> {
        setProductQty(newQty);
     } 
 
+    const item = useMemo(()=> ({
+        image: imageUrl,
+        name,
+        price,
+        qty: productQty
+    }), [imageUrl, name, price, productQty]);
+
     return(
         <>
         <div className= {styles['game-Details']}>
@@ -41,7 +48,7 @@ const GameCardDetails =()=> {
                 </div>
                 <br />
                 <div className = {styles.addToCart}>
-                <button>Add To Cart</button>
+                <button onClick={()=> console.log(item)}>Add To Cart</button>
                 </div>
             </div>
         </div>
