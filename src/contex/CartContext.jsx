@@ -18,10 +18,14 @@ const CartContextProvider = ({ children }) => {
     };
 
     const removeFromCart = (item) => {
-
+        setMyCart((prevCart) => prevCart.filter( (cartItem)=> cartItem.name != item.name));
     };
 
-    return(<CartContext.Provider>
+    const clearMyCart = () => {
+        setMyCart([]);
+    }
+
+    return(<CartContext.Provider value= {{myCart, addToCart, removeFromCart, clearMyCart}} >
         { children }
     </CartContext.Provider>);
 
