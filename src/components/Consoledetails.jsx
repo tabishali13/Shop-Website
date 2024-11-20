@@ -1,9 +1,11 @@
 import { useParams } from "react-router-dom";
 import data from "../data";
-import { useEffect, useMemo, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import styles from '../styles/consoleDetails.module.css';
+import { CartContext } from "../contex/CartContext";
 
 function Consoledetails(){
+    const { addToCart } = useContext(CartContext)
     const {productId} = useParams();
     const [userProduct, setUserProduct] = useState({});
     const [error, setError] = useState(false); //this state is used to track errors
@@ -30,7 +32,7 @@ function Consoledetails(){
         setUserProduct({...userProduct, qty: userProduct.qty > 1 ? userProduct.qty - 1 : 1});
     }
 
-    const addToCart = useMemo( ()=> ({
+    const item = useMemo( ()=> ({
         image: userProduct.image,
         name: userProduct.name,
         price: userProduct.price,
@@ -55,7 +57,7 @@ function Consoledetails(){
                 <button onClick={increaseQty}>+</button>
             </div>
             <br />
-            <button onClick={ ()=> console.log(addToCart)}> Add to Cart </button>
+            <button onClick={ ()=> addToCart(item) }> Add to Cart </button>
             </div>
         </div>
         </div>

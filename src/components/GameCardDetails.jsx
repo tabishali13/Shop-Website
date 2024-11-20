@@ -1,8 +1,10 @@
 import { useLocation } from "react-router-dom";
 import styles from '../styles/gameDetail.module.css'
-import { useState, useMemo } from "react";
+import { useState, useMemo, useContext } from "react";
+import { CartContext } from "../contex/CartContext";
 
 const GameCardDetails =()=> {
+    const { addToCart } = useContext(CartContext);
     const location = useLocation();
     const {imageUrl, name, price, description, qty} = location.state || {};
     const [productQty, setProductQty] = useState(qty || 1);
@@ -48,7 +50,7 @@ const GameCardDetails =()=> {
                 </div>
                 <br />
                 <div className = {styles.addToCart}>
-                <button onClick={()=> console.log(item)}>Add To Cart</button>
+                <button onClick={()=> addToCart(item)}>Add To Cart</button>
                 </div>
             </div>
         </div>

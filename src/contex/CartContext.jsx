@@ -8,7 +8,7 @@ const CartContextProvider = ({ children }) => {
 
     const addToCart = (item) => {
         setMyCart((prevCart) => {
-            const existingItem = prevCart.find(cartItem => cartItem.name == item.name);
+            const existingItem = prevCart.find(cartItem => cartItem.name === item.name);
             if(existingItem) {
                 return prevCart.map(cartItem => cartItem.name === item.name ? {...cartItem, qty: cartItem.qty + item.qty} : cartItem);
             }else{
