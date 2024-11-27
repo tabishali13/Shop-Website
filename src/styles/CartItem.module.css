@@ -51,16 +51,16 @@
     object-fit: cover;
 }
 
-@media(max-width: 1024px ){
-    li{
+@media (max-width: 1024px) {
+    .gaming-consoles li{
         flex: 0 1 calc(50% - 40px);
         max-width: calc(50% - 40px);
     }
 }
 
-@media(max-width: 600px){
-    li{
-        flex: 0 1 calc(100% - 40px);
-        max-width: calc(1000% - 40px);
+@media (max-width: 600px){
+    .gaming-consoles li{
+        flex: 0 1 calc(100% - 50px);
+        max-width: calc(100% - 50px);
     }
 }

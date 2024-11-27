@@ -1,0 +1,40 @@
+.CartPage *{
+    color: #333;
+}
+
+.CartPage{
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.CartContents{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.removeBtn {
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;;
+}
+
+.clearBtn{
+    background-color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;;
+}
+
+.CartContents li{
+    margin-top: 15px;
+}

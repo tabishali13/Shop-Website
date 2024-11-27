@@ -10,7 +10,7 @@ function GameCard({imageUrl, name, price}){
         <div className= {styles.gameCards}>
             <img src={imageUrl} alt= {name} className="gameImage" />
              <h2>{name}</h2> 
-             <p>{price} CAD</p>
+             <p>${price} CAD</p>
         </div>
         </>
     );
@@ -18,7 +18,7 @@ function GameCard({imageUrl, name, price}){
 
 GameCard.propTypes = {
     imageUrl: PropTypes.string,
-    name: PropTypes.string,
+    name: PropTypes.number,
     price: PropTypes.string,
 }
 

@@ -43,7 +43,11 @@ function Navbar() {
         </div>
 
         <div className= {styles.navButtons}>
-        <button className = {styles['signIn-btn']}> Sign In </button>
+        
+        <Link to= '/Cart'>
+        <button className = {styles['signIn-btn']}> Cart </button>
+        </Link>
+
         <button className= {styles['signup-btn']}>Sign Up</button>
         </div>
 

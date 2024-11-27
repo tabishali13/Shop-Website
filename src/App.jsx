@@ -7,14 +7,14 @@ import About from './components/About.jsx';
 import Consoledetails from './components/Consoledetails.jsx'; 
 import GameCardDetails from './components/GameCardDetails.jsx';
 import { Routes, Route } from 'react-router-dom';
-import { CartContext } from './contex/CartContext.jsx';
-
+import Cart from './components/Cart.jsx';
+import { CartContextProvider } from './contex/CartContext.jsx';
 
 function App() {
   
   return (
     <>
-    <CartContext.Provider>
+    <CartContextProvider>
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -23,9 +23,10 @@ function App() {
         <Route path='/About' element={<About/>}></Route>
         <Route path='/product/:productId' element={<Consoledetails/>}></Route>
         <Route path='/game/:slug' element={<GameCardDetails/>}></Route>
+        <Route path='/Cart' element={<Cart/>}></Route>
       </Routes>
     </BrowserRouter>
-    </CartContext.Provider>
+    </CartContextProvider>
     </>
   )
 }

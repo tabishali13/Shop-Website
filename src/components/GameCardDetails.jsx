@@ -41,7 +41,7 @@ const GameCardDetails =()=> {
                 <br/>
                 <p>{description}</p>
                 <br/>
-                <p>{price}</p>
+                <p>${price}</p>
                 <br />
                 <div className= {styles.itemQuantity}>
                 <button onClick={handleDecrease}> - </button>
