@@ -3,10 +3,18 @@ import { CartContext } from "../contex/CartContext";
 import styles from '../styles/cart.module.css';
 
 const Cart =()=> {
-    const { removeFromCart, clearMyCart, myCart} = useContext(CartContext);
+    const { removeFromCart, clearMyCart, myCart, setMyCart} = useContext(CartContext);
     const [totalPrice, setTotalPrice] = useState(0);
 
+    useEffect(()=>{
+        const savedItems = localStorage.getItem("cartContents");
+        if(savedItems){
+            setMyCart(JSON.parse(savedItems));
+        }
+    }, []);
+
     useEffect(()=> {
+        localStorage.setItem("cartContents", JSON.stringify(myCart));
         const total = myCart.reduce((total, item) => {
             return total + (item.price * item.qty);
         },0);
