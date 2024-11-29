@@ -6,15 +6,15 @@ const Cart =()=> {
     const { removeFromCart, clearMyCart, myCart, setMyCart} = useContext(CartContext);
     const [totalPrice, setTotalPrice] = useState(0);
 
-    useEffect(()=>{
-        const savedItems = localStorage.getItem("cartContents");
+    useEffect(()=> {
+        const savedItems = localStorage.getItem("savedCart");
         if(savedItems){
             setMyCart(JSON.parse(savedItems));
         }
-    }, []);
+    }, [setMyCart]);
 
     useEffect(()=> {
-        localStorage.setItem("cartContents", JSON.stringify(myCart));
+        localStorage.setItem("savedCart", JSON.stringify(myCart));
         const total = myCart.reduce((total, item) => {
             return total + (item.price * item.qty);
         },0);
