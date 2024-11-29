@@ -61,3 +61,9 @@
     background-color: #0a3b69;
     cursor: pointer;
 }
+
+.game-Description button:active{
+    background-color: #002b4f;
+    transform: scale(0.98);
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
+}

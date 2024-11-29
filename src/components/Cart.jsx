@@ -8,13 +8,15 @@ const Cart =()=> {
 
     useEffect(()=> {
         const savedItems = localStorage.getItem("savedCart");
-        if(savedItems){
+        if(savedItems && myCart.length === 0){
             setMyCart(JSON.parse(savedItems));
         }
-    }, [setMyCart]);
+    }, []); 
 
     useEffect(()=> {
+        if(myCart.length > 0){
         localStorage.setItem("savedCart", JSON.stringify(myCart));
+        } 
         const total = myCart.reduce((total, item) => {
             return total + (item.price * item.qty);
         },0);
