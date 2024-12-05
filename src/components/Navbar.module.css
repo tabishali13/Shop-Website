@@ -13,13 +13,13 @@
   color: aliceblue;
 }
 
-.nav-sections{
+.navSections{
   display: flex;
   gap: 65px;
   align-items: center;  
 }
 
-.nav-sections li {
+.navSections li {
   list-style: none;
   cursor: pointer;
   display: flex;
@@ -27,12 +27,12 @@
   align-items: center;
 }
 
-.nav-sections li a{
+.navSections li a{
   text-decoration: none;
   color: inherit;
 }
  
- .nav-sections li hr{
+ .navSections li hr{
   border: none;
   background-color: rgb(231, 221, 221);
   height: 3px;
@@ -52,5 +52,11 @@
 
  .signIn-btn:hover{
   background-color: #1d5e9a;
+  cursor: pointer;
+ }
+
+ .openMenu,
+ .closeMenu {
+  font-size: 1.5rem;
   cursor: pointer;
  }

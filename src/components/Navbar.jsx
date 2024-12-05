@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import styles from './Navbar.module.css';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../contex/CartContext';
-import Cart from './Cart';
+import { IoClose, IoMenu } from "react-icons/io5";
 
 function Navbar() {
   const { myCart } = useContext(CartContext); //context variable to hold contents of cart
@@ -11,6 +11,17 @@ function Navbar() {
     //either return the page in local storage or 'Home' (on first render)
     return localStorage.getItem("selectedPage") || "Home";
   });
+  const [showMenu, setShowMenu] = useState(false); //for drop down toggle
+
+  const toggleMenu =()=>{
+    setShowMenu(!showMenu);
+  }
+
+  const closeMenuMobile =()=>{
+    if(window.innerWidth <= 1150){
+      setShowMenu(false);
+    }
+  }
 
   useEffect(()=>{
     const total = myCart.reduce((itemTotal, item) => itemTotal + item.qty, 0); // includes 0 as an argument as it represents the initial value 
@@ -21,6 +32,7 @@ function Navbar() {
     setSelect(page);
     //saved the selected page into local storage
     localStorage.setItem("selectedPage", page);
+    closeMenuMobile(); //after selecting a link the page dropdown will close (mobile only)
   }
   //used for loading the selected page on component mount
   useEffect(()=>
@@ -34,11 +46,11 @@ function Navbar() {
 
   return (
     <>
-      <div className= {styles.navContainer}>
+      <div className= {`${styles.navContainer} ${showMenu ? styles.show : styles.hide}`}>
         {/*Make this Clickable so that when clicked brings you back to home page */}
         <div>PixelRealm</div>
         
-        <div className= {styles['nav-sections']}>
+        <div className= {styles.navSections}>
           
           <li to = "/" onClick={() => handleMenuChange("Home")}> 
              <Link to="/">Home</Link>{select === "Home" ? <hr /> : <> </>}  
@@ -51,14 +63,16 @@ function Navbar() {
             <Link to='/About'> About </Link> 
             {select === "About" ? <hr/> : <></>} </li>
 
+          <li>
+            <Link to= '/Cart'>
+            <button className = {styles['signIn-btn']}> Cart ({totalItems}) </button>
+            </Link>
+          </li>
+
         </div>
 
-        <div className= {styles.navButtons}>
-        
-        <Link to= '/Cart'>
-        <button className = {styles['signIn-btn']}> Cart({totalItems}) </button>
-        </Link>
-
+        <div className= {styles.menuIcon} onClick={toggleMenu}>
+        {showMenu ? <IoClose/> : <IoMenu/>}
         </div>
 
       </div>
