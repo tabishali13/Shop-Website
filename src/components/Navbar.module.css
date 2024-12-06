@@ -13,6 +13,10 @@
   color: aliceblue;
 }
 
+.homeLink{
+  text-decoration: none;
+}
+
 .navSections{
   display: flex;
   gap: 65px;
@@ -27,6 +31,10 @@
   align-items: center;
 }
 
+.navSections li:hover{
+  color: rgb(188, 188, 188);
+}
+
 .navSections li a{
   text-decoration: none;
   color: inherit;
@@ -39,6 +47,12 @@
   width: 115%;
   border-radius: 10px;
  }
+
+.menuIcon{
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+}
 
  .signIn-btn{
    border-radius: 10px;
@@ -55,8 +69,29 @@
   cursor: pointer;
  }
 
- .openMenu,
- .closeMenu {
-  font-size: 1.5rem;
-  cursor: pointer;
+ @media (max-width: 768px) {
+  .navSections{
+    display: hidden;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    background-color: #003568;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 15px 0;
+    z-index: 100;
+  }
+
+  .menuIcon{
+    display: block;
+  }
+
+  .navSections.show{
+    display: flex;
+  }
+
+  .navSections.hide{
+    display: none;
+  }
  }

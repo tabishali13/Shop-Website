@@ -3,6 +3,7 @@ import styles from './Navbar.module.css';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../contex/CartContext';
 import { IoClose, IoMenu } from "react-icons/io5";
+import Cart from './Cart';
 
 function Navbar() {
   const { myCart } = useContext(CartContext); //context variable to hold contents of cart
@@ -18,13 +19,13 @@ function Navbar() {
   }
 
   const closeMenuMobile =()=>{
-    if(window.innerWidth <= 1150){
+    if(window.innerWidth <= 768){
       setShowMenu(false);
     }
   }
 
   useEffect(()=>{
-    const total = myCart.reduce((itemTotal, item) => itemTotal + item.qty, 0); // includes 0 as an argument as it represents the initial value 
+    const total = myCart.reduce((itemTotal, item) => {return itemTotal + item.qty}, 0); // includes 0 as an argument as it represents the initial value 
     setTotalItems(total);
   }, [myCart]); //compute total items in myCart whenever myCart changes
 
@@ -32,7 +33,7 @@ function Navbar() {
     setSelect(page);
     //saved the selected page into local storage
     localStorage.setItem("selectedPage", page);
-    closeMenuMobile(); //after selecting a link the page dropdown will close (mobile only)
+    closeMenuMobile(); //after selecting a link the dropdown menu will close (mobile only)
   }
   //used for loading the selected page on component mount
   useEffect(()=>
@@ -46,11 +47,12 @@ function Navbar() {
 
   return (
     <>
-      <div className= {`${styles.navContainer} ${showMenu ? styles.show : styles.hide}`}>
-        {/*Make this Clickable so that when clicked brings you back to home page */}
-        <div>PixelRealm</div>
+      <div className= {styles.navContainer}>
+        <div>
+          <Link to="/" className= {styles.homeLink}>PixelRealm</Link>
+        </div>
         
-        <div className= {styles.navSections}>
+        <div className= {`${styles.navSections} ${showMenu ? styles.show : styles.hide}`}>
           
           <li to = "/" onClick={() => handleMenuChange("Home")}> 
              <Link to="/">Home</Link>{select === "Home" ? <hr /> : <> </>}  
@@ -63,16 +65,15 @@ function Navbar() {
             <Link to='/About'> About </Link> 
             {select === "About" ? <hr/> : <></>} </li>
 
-          <li>
+          <li onClick={()=> handleMenuChange('Cart')}>
             <Link to= '/Cart'>
-            <button className = {styles['signIn-btn']}> Cart ({totalItems}) </button>
+            <button className = {styles['signIn-btn']}> Cart({totalItems}) </button>
             </Link>
           </li>
-
         </div>
 
         <div className= {styles.menuIcon} onClick={toggleMenu}>
-        {showMenu ? <IoClose/> : <IoMenu/>}
+          {showMenu ? <IoClose/> : <IoMenu/>}
         </div>
 
       </div>
