@@ -16,7 +16,6 @@
 }
 
 body{
-
     background: rgb(0,12,36);
     background: linear-gradient(90deg, rgba(0,12,36,1) 1%, rgba(134,134,162,1) 55%);
 }
@@ -54,11 +53,22 @@ body{
 }
 
 .imgContainer img{
-    
     max-width: 100%;
     max-height: 550px;
     object-fit: cover;
     border-radius: 10px;
     height: auto;
     margin-right: 40px;
+}
+
+@media (max-width: 768px){
+    .content{
+        display: flex;
+        flex-direction: column;
+        padding: 15px 10px;
+    }
+
+    .homepage button{
+
+    }
 }

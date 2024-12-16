@@ -35,7 +35,7 @@ const Cart =()=> {
                     <ul className= {styles.CartContents}>
                     {myCart.map((item, index) => (
                         <li key={index}>
-                            <img src={item.image} alt= {item.name} style={{width: "50px"}} />
+                            <img src={item.image} alt= {item.name} style={{width: "150px"}} />
                             <span> {item.name} </span>
                             <span>$:{item.price}</span>
                             <span> Quantity: {item.qty} </span>

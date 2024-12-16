@@ -1,5 +1,10 @@
 .CartPage *{
     color: #333;
+    font-size: 1.2rem;
+}
+
+.myCart h2{
+    margin-top: 10px;
 }
 
 .CartPage{

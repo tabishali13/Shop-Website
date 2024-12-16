@@ -19,7 +19,7 @@ function Navbar() {
   }
 
   const closeMenuMobile =()=>{
-    if(window.innerWidth <= 768){
+    if(window.innerWidth <= 1150){
       setShowMenu(false);
     }
   }
@@ -55,7 +55,7 @@ function Navbar() {
         <div className= {`${styles.navSections} ${showMenu ? styles.show : styles.hide}`}>
           
           <li to = "/" onClick={() => handleMenuChange("Home")}> 
-             <Link to="/">Home</Link>{select === "Home" ? <hr /> : <> </>}  
+             <Link to="/">Home</Link>{select === "Home" ? <hr/> : <> </>}  
           </li>
 
           <li onClick = {()=> handleMenuChange("Shop")}>
