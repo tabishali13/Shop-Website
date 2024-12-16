@@ -1,0 +1,35 @@
+.displayCards{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 2rem 7rem;
+}
+
+.displayCards a{
+  text-decoration: none;
+}
+
+.gameCardContainer{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+h1{
+  text-align: center;
+}
+
+@media(max-width: 900px){
+  .displayCards{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media(max-width: 600px){
+  .displayCards{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+
+}

@@ -1,0 +1,97 @@
+* {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  box-shadow: 0 1px 3px -2px black;
+  flex-wrap: wrap;
+  background-color: #003568;
+  color: aliceblue;
+}
+
+.homeLink{
+  text-decoration: none;
+}
+
+.navSections{
+  display: flex;
+  gap: 65px;
+  align-items: center;  
+}
+
+.navSections li {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navSections li:hover{
+  color: rgb(188, 188, 188);
+}
+
+.navSections li a{
+  text-decoration: none;
+  color: inherit;
+}
+ 
+ .navSections li hr{
+  border: none;
+  background-color: rgb(231, 221, 221);
+  height: 3px;
+  width: 115%;
+  border-radius: 10px;
+ }
+
+.menuIcon{
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+ .signIn-btn{
+   border-radius: 10px;
+   background-color: #003568;
+   outline: none;
+   padding: 10px 15px;
+   border: solid white 1px;
+   color: white;
+   margin-right: 5px;
+ }
+
+ .signIn-btn:hover{
+  background-color: #1d5e9a;
+  cursor: pointer;
+ }
+
+ @media (max-width: 768px) {
+  .navSections{
+    display: hidden;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    background-color: #003568;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 15px 0;
+    z-index: 100;
+  }
+
+  .menuIcon{
+    display: block;
+  }
+
+  .navSections.show{
+    display: flex;
+  }
+
+  .navSections.hide{
+    display: none;
+  }
+ }

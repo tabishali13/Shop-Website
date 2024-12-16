@@ -1,0 +1,67 @@
+.About-page{
+    padding: 20px;
+    background-color: #f0f0f0cf;
+}
+
+.About-page * {
+    color: #333;
+}
+
+.About-page h1, .valuesTitle h1{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.About-page hr{
+    border: none;
+    height: 2px;
+    width: 85%;
+    background-color: #333;
+    margin: 0 auto;
+}
+
+.mission, .values{
+    display: flex;
+    gap: 70px;
+    padding: 40px;
+}
+
+.values h3{
+    margin-top: 50px;
+}
+
+.mission h3{
+    margin-top: 50px;
+}
+.mission img, .values img {
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    object-fit: cover;
+    width: 500px;
+    height: auto;
+    margin-left: 50px;
+}
+
+.values img{
+    margin-left: 120px;
+}
+
+@media (max-width: 1000px){
+    .mission, .values{
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .mission img, .values img{
+        max-width: 400px; /* changed width to accomodate smaller screen size */
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .mission h3, .values h3{
+        text-align: center; 
+        margin-top: 10px;
+    }
+}
